@@ -33,9 +33,10 @@ class MyApp extends StatelessWidget {
               child: Text(
                 'Instituições',
                 style: TextStyle(
-                    fontSize: 32.0,
+                    fontFamily: "Poppins",
+                    fontSize: 36.0,
                     fontWeight: FontWeight.bold,
-                    color: Color.fromARGB(255, 29, 30, 77)),
+                    color: Color.fromARGB(255, 14, 56, 70))
               ),
             ),
             Padding(
@@ -44,15 +45,15 @@ class MyApp extends StatelessWidget {
                 decoration: InputDecoration(
                   hintText: 'Pesquise uma Instituição...',
                   hintStyle: TextStyle(color: Colors.grey),
-                  border: OutlineInputBorder(
+                  focusedBorder: OutlineInputBorder(
                     borderSide: BorderSide(
-                      width: 16.0,
-                      color: Color.fromARGB(237, 185, 166, 1),
+                      width: 3.0,
+                      color: Color.fromARGB(255, 255, 209, 64),
                       style: BorderStyle.solid,
                     ),
                   ),
                   prefixIcon: Icon(Icons.search,
-                      color: Color.fromARGB(237, 185, 166, 1)),
+                      color: Color.fromARGB(255, 255, 209, 64)),
                 ),
               ),
             ),
@@ -61,8 +62,9 @@ class MyApp extends StatelessWidget {
               child: Text(
                 'Etecs',
                 style: TextStyle(
+                  fontFamily: "Inter",
                     fontSize: 32.0,
-                    color: Colors.brown,
+                    color: Color.fromARGB(255, 61, 20, 10),
                     fontWeight: FontWeight.bold),
               ),
             ),
@@ -86,8 +88,9 @@ class MyApp extends StatelessWidget {
               child: Text(
                 'Fatecs',
                 style: TextStyle(
+                    fontFamily: "Inter",
                     fontSize: 32.0,
-                    color: Colors.brown,
+                    color: Color.fromARGB(255, 61, 20, 10),
                     fontWeight: FontWeight.bold),
               ),
             ),
@@ -119,7 +122,7 @@ class CardWidget extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(8.0), // Adicionando espaço entre os cards
       child: Card(
-        color: Color.fromARGB(255, 130, 30, 141), // Cor de fundo do card
+        color: Color.fromARGB(220, 69, 46, 172), // Cor de fundo do card
         shape: RoundedRectangleBorder(
           borderRadius:
               BorderRadius.circular(10.0), // Arredondando as bordas do card
@@ -146,9 +149,9 @@ class CardWidget extends StatelessWidget {
               Text(
                 'xxxxxxx',
                 style: TextStyle(
+                    fontFamily: "Poppins",
                     fontSize: 14.0,
-                    color: Color.fromARGB(255, 158, 156,
-                        156)), // Definindo estilo para o texto menor
+                    color: Color.fromARGB(255, 158, 156, 156)), // Definindo estilo para o texto menor
               ),
             ],
           ),
@@ -164,7 +167,7 @@ class CardWidget2 extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(8.0), // Adicionando espaço entre os cards
       child: Card(
-        color: Color.fromARGB(255, 245, 211, 89), // Cor de fundo do card
+        color: Color.fromARGB(220, 255, 209, 64), // Cor de fundo do card
         shape: RoundedRectangleBorder(
           borderRadius:
               BorderRadius.circular(10.0), // Arredondando as bordas do card

@@ -1,8 +1,35 @@
-2024/03/07-08:01:14.638 5ac Creating DB C:\Users\LAB1-A~1\AppData\Local\Temp\flutter_tools.eaeb6b9c\flutter_tools_chrome_device.ebad6146\Default\Local Storage\leveldb since it was missing.
-2024/03/07-08:01:14.751 5ac Reusing MANIFEST C:\Users\LAB1-A~1\AppData\Local\Temp\flutter_tools.eaeb6b9c\flutter_tools_chrome_device.ebad6146\Default\Local Storage\leveldb/MANIFEST-000001
-2024/03/07-08:52:57.771 2b10 Level-0 table #5: started
-2024/03/07-08:52:57.783 2b10 Level-0 table #5: 70503 bytes OK
-2024/03/07-08:52:57.787 2b10 Delete type=0 #3
-2024/03/07-08:53:08.315 2b10 Level-0 table #7: started
-2024/03/07-08:53:08.320 2b10 Level-0 table #7: 69005 bytes OK
-2024/03/07-08:53:08.323 2b10 Delete type=0 #4
+2024/03/14-07:40:20.678 2bd4 Creating DB C:\Users\LAB1-A~1\AppData\Local\Temp\flutter_tools.ea590335\flutter_tools_chrome_device.b46f8f03\Default\Local Storage\leveldb since it was missing.
+2024/03/14-07:40:20.726 2bd4 Reusing MANIFEST C:\Users\LAB1-A~1\AppData\Local\Temp\flutter_tools.ea590335\flutter_tools_chrome_device.b46f8f03\Default\Local Storage\leveldb/MANIFEST-000001
+2024/03/14-08:06:05.735 1024 Level-0 table #5: started
+2024/03/14-08:06:05.741 1024 Level-0 table #5: 44021 bytes OK
+2024/03/14-08:06:05.744 1024 Delete type=0 #3
+2024/03/14-08:16:48.004 1024 Level-0 table #7: started
+2024/03/14-08:16:48.013 1024 Level-0 table #7: 36419 bytes OK
+2024/03/14-08:16:48.015 1024 Delete type=0 #4
+2024/03/14-08:17:03.562 1024 Level-0 table #9: started
+2024/03/14-08:17:03.577 1024 Level-0 table #9: 25293 bytes OK
+2024/03/14-08:17:03.580 1024 Delete type=0 #6
+2024/03/14-08:19:06.860 1024 Level-0 table #11: started
+2024/03/14-08:19:06.869 1024 Level-0 table #11: 23316 bytes OK
+2024/03/14-08:19:06.872 1024 Delete type=0 #8
+2024/03/14-08:19:59.247 1024 Level-0 table #13: started
+2024/03/14-08:19:59.257 1024 Level-0 table #13: 18333 bytes OK
+2024/03/14-08:19:59.259 1024 Delete type=0 #10
+2024/03/14-08:21:44.719 1024 Level-0 table #15: started
+2024/03/14-08:21:44.730 1024 Level-0 table #15: 29604 bytes OK
+2024/03/14-08:21:44.733 1024 Delete type=0 #12
+2024/03/14-08:21:44.733 1024 Compacting 4@0 + 1@1 files
+2024/03/14-08:21:44.740 1024 Generated table #16@0: 48 keys, 53405 bytes
+2024/03/14-08:21:44.740 1024 Compacted 4@0 + 1@1 files => 53405 bytes
+2024/03/14-08:21:44.740 1024 compacted to: files[ 0 1 1 0 0 0 0 ]
+2024/03/14-08:21:44.741 1024 Delete type=2 #7
+2024/03/14-08:21:44.741 1024 Delete type=2 #9
+2024/03/14-08:21:44.741 1024 Delete type=2 #11
+2024/03/14-08:21:44.741 1024 Delete type=2 #13
+2024/03/14-08:21:44.741 1024 Delete type=2 #15
+2024/03/14-08:26:35.903 1024 Level-0 table #18: started
+2024/03/14-08:26:35.912 1024 Level-0 table #18: 21554 bytes OK
+2024/03/14-08:26:35.914 1024 Delete type=0 #14
+2024/03/14-08:28:06.909 1024 Level-0 table #20: started
+2024/03/14-08:28:06.920 1024 Level-0 table #20: 33535 bytes OK
+2024/03/14-08:28:06.923 1024 Delete type=0 #17

@@ -1,7 +1,4 @@
-2024/03/15-22:20:15.836 3614 Reusing MANIFEST C:\Users\Gabriel\AppData\Local\Temp\flutter_tools.7eb8f1e7\flutter_tools_chrome_device.b65ed1d5\Default\File System\Origins/MANIFEST-000001
-2024/03/15-22:20:15.839 3614 Recovering log #3
-2024/03/15-22:20:15.840 3614 Level-0 table #6: started
-2024/03/15-22:20:15.907 3614 Level-0 table #6: 181 bytes OK
-2024/03/15-22:20:15.908 3614 Recovering log #6
-2024/03/15-22:20:15.910 3614 Reusing old log C:\Users\Gabriel\AppData\Local\Temp\flutter_tools.7eb8f1e7\flutter_tools_chrome_device.b65ed1d5\Default\File System\Origins/000006.log 
-2024/03/15-22:20:15.919 3614 Delete type=0 #3
+2024/03/23-11:57:53.389 4ff4 Reusing MANIFEST C:\Users\Gabriel\AppData\Local\Temp\flutter_tools.4c4934a7\flutter_tools_chrome_device.ff45803f\Default\File System\Origins/MANIFEST-000001
+2024/03/23-11:57:53.391 4ff4 Recovering log #6
+2024/03/23-11:57:53.392 4ff4 Reusing old log C:\Users\Gabriel\AppData\Local\Temp\flutter_tools.4c4934a7\flutter_tools_chrome_device.ff45803f\Default\File System\Origins/000006.log 
+2024/03/23-11:57:53.393 4ff4 Delete type=0 #3

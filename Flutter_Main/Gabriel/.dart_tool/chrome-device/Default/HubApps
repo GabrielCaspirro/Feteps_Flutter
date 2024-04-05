@@ -732,6 +732,10 @@
       "version": "1.7.35"
    }, {
       "auto_show": {
+         "dsat_flyout": {
+            "trigger_count": 3,
+            "trigger_seconds": 5
+         },
          "enabled": true,
          "fallback_notification": {
             "show_count": 5,
@@ -796,9 +800,9 @@
       "description": "Verifique o email enquanto permanece no seu fluxo",
       "icon": {
          "raster_icon": {
-            "dark_mode": "https://edgeassetservice.azureedge.net/assets/edge_hub_apps_outlook_dark.png/1.11.5/asset",
-            "high_contrast": "https://edgeassetservice.azureedge.net/assets/edge_hub_apps_outlook_hc.png/1.11.5/asset",
-            "light_mode": "https://edgeassetservice.azureedge.net/assets/edge_hub_apps_outlook_light.png/1.11.5/asset"
+            "dark_mode": "https://edgeassetservice.azureedge.net/assets/edge_hub_apps_outlook_dark.png/1.11.4/asset",
+            "high_contrast": "https://edgeassetservice.azureedge.net/assets/edge_hub_apps_outlook_hc.png/1.11.4/asset",
+            "light_mode": "https://edgeassetservice.azureedge.net/assets/edge_hub_apps_outlook_light.png/1.11.4/asset"
          }
       },
       "id": "8682d0fa-50b3-4ece-aa5b-e0b33f9919e2",
@@ -843,7 +847,7 @@
       },
       "trusted_domains": [ "live.com", "office.com", "microsoftonline.com", "microsoft.com", "office365.com" ],
       "trusted_types": [ "default", "dompurify" ],
-      "version": "1.11.5"
+      "version": "1.11.4"
    }, {
       "capabilities|flight:msDesignerSinglePrompt": {
          "enable_force_dark_mode": true
@@ -1426,6 +1430,138 @@
          "name": "Open link in new tab"
       } ],
       "default_locale": "en",
+      "description": " Listen to music on Last Music!",
+      "disabled": true,
+      "disabled|flight:msEdgeHubAppMusicLastGlobal": false,
+      "disabled|locale:en": false,
+      "icon": {
+         "raster_icon": {
+            "light_mode": "https://edgeassetservice.azureedge.net/assets/edge_hub_apps_last.png/1.0.3/asset"
+         }
+      },
+      "id": "3a2f4dee-d482-4ef8-baef-cb22b649608c",
+      "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAmE6jldMEkGVUM1QJA4AFhjTkspK5vXgShQew/SsBZi1lk3LdAJQNMxdTt7WKkAGMA0kfBDNOCMmhKBcZobJok36ukKBrSFHub7Z6+SpI+0O3gOuWbFBSWRUdEMlIADHT2ViH0vwRYm5Lq2cyItUl85VRbE4f6/TQoOF52Qqw6qFPcEbueSRLJfaspIuC1bSXydOUOQ/oMnNTtvaSnLchD2t1x99SotRCF4M+S64pPhTxgqLGHuRjBjTFPYckexucYX0nWy5D+gTsrB+iB93Pn7PslqFNmmtNkvE7Mac2T7T6KQkfMG1OvdvlOAxIGHvecGK4v5RgYQSCqP+9xmmodwIDAQAB",
+      "lifetime": "background",
+      "locales": [ "en" ],
+      "manifest_version": 3,
+      "name": "Last Music",
+      "tags": [ "third_party" ],
+      "target": {
+         "url": "https://www.last.fm/"
+      },
+      "version": "1.0.3"
+   }, {
+      "custom_actions": [ {
+         "action": {
+            "target": "new_tab",
+            "type": "url_action"
+         },
+         "icon": {
+            "builtin_icon": "OpenInNew"
+         },
+         "location": "header_button",
+         "name": "Open link in new tab"
+      } ],
+      "default_locale": "en",
+      "description": " Listen to music on Ku Gou!",
+      "disabled": true,
+      "disabled|flight:msEdgeHubAppMusicKuGouGlobal": false,
+      "disabled|locale:en": false,
+      "icon": {
+         "raster_icon": {
+            "light_mode": "https://edgeassetservice.azureedge.net/assets/edge_hub_apps_ku_gou.png/1.0.3/asset"
+         }
+      },
+      "id": "3b5ee6f6-5322-4061-81e4-d97681852d66",
+      "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAmHsb5wJfFzBA2rthZIZPHPqdU0OM5tVP8PZYE7+9/k2AYj8W/wUOr9fo5/eYdcCyeo4OGCApf6pPTgGyS9S0TEb1K+LncaBT8YdwNSnWIBAsDvP5SzjSt/7XCuKx6CNBIXUi/bML+0MI7uwC8xo/IrgNWWaWBqm3oJ3NCtrx/focCP2iMznQuiPKS96Xw25Knl4YHfxFxxwQfqC9y61U6v4F20cNIVSyQF0MaWxLNAcSLVGuOOOBLr/oL0iS2AbNb4qkXI4NxyM/+tlj+up6ZARoYHI1M+ntOADQXRUINSPVx3hO2iJy+SKtf3Xx7h41QLUdZ+KOWD64eqTadImrrQIDAQAB",
+      "lifetime": "background",
+      "locales": [ "en" ],
+      "manifest_version": 3,
+      "name": "Ku Gou",
+      "tags": [ "third_party" ],
+      "target": {
+         "url": "https://m.kugou.com/"
+      },
+      "version": "1.0.3"
+   }, {
+      "custom_actions": [ {
+         "action": {
+            "target": "new_tab",
+            "type": "url_action"
+         },
+         "icon": {
+            "builtin_icon": "OpenInNew"
+         },
+         "location": "header_button",
+         "name": "Open link in new tab"
+      } ],
+      "default_locale": "en",
+      "description": " Listen to music on QQ Music!",
+      "disabled": true,
+      "disabled|flight:msEdgeHubAppMusicQQGlobal": false,
+      "disabled|locale:en": false,
+      "icon": {
+         "raster_icon": {
+            "light_mode": "https://edgeassetservice.azureedge.net/assets/edge_hub_apps_qq.png/1.0.3/asset"
+         }
+      },
+      "id": "42985e4c-2a12-401d-90f2-afaff9cd7c92",
+      "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAzmfgOpfXJwtGfxGRnHplGxYc1nLfyKWffGD4nDIY+S4uMKCYJEh0a+gR75AQsDGdyrfxJ6hHXOH5wEW2y3wPUVyl4YkM2PRrfXdyG61RXODdm7Rz9MM+c9AqIWiZkJ/7QnZX+d8iIX45TmHzNAqPhc0usYfCXaFeHAQ2GnpEiuBvzLry3b0oYKb4Lo8GBrdsyVt1TuA7b86bRimpb3j1WH206Ua9rKASDcAbXrGc8CnC6fs/azZ2BHfkW6WYSNjv/f2lYd5g44xrOQ8Q+bnIoNPhd/sPiEE1J9Ekf8pSxe9pBQQ5rkc4N+B6nV6yMU7Hs+s24kwj444WMMWjapkrgwIDAQAB",
+      "lifetime": "background",
+      "locales": [ "en" ],
+      "manifest_version": 3,
+      "name": "QQ Music",
+      "tags": [ "third_party" ],
+      "target": {
+         "url": "https://i.y.qq.com/n2/m/index.html"
+      },
+      "version": "1.0.3"
+   }, {
+      "custom_actions": [ {
+         "action": {
+            "target": "new_tab",
+            "type": "url_action"
+         },
+         "icon": {
+            "builtin_icon": "OpenInNew"
+         },
+         "location": "header_button",
+         "name": "Open link in new tab"
+      } ],
+      "default_locale": "en",
+      "description": " Listen to music on Gaana Music!",
+      "disabled": true,
+      "disabled|flight:msEdgeHubAppMusicGaanaGlobal": false,
+      "disabled|locale:en": false,
+      "icon": {
+         "raster_icon": {
+            "light_mode": "https://edgeassetservice.azureedge.net/assets/edge_hub_apps_gaana.png/1.0.3/asset"
+         }
+      },
+      "id": "844aac69-589e-4f86-9e37-cc51a1f8ed96",
+      "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA2MZGDJZ41ITS6Ac+ed5gVqrXZE7jL6Ke0Ba80fAhgwQAA2909orv2Kr7saBl9RA5oDWkHHv96cpNuinkqXYoNJitka9La+fw7TOYakNPV7NWAAQhsjaZtlYoQuK4u3tfst5KcINdMjDDCmr0FwPG7ctK2IYVBcNOZpu1cIivi/sJyn9AaNHF00y/Qh/rrMMo++JKTIxQNXDq1sTFf0YUoN6/MMIteWgGhPMWkYmg0KYNM0I4Azbz6S/TIMxXLd/klgJDsGA+Y9FGwBqkjJhXOC5v5bxLlonUM+v2g5OpnqVx/HEF4/670Q4hxkkCEnfrq7sl+jJLclT5c63ZlZXkpQIDAQAB",
+      "lifetime": "background",
+      "locales": [ "en" ],
+      "manifest_version": 3,
+      "name": "Gaana Music",
+      "tags": [ "third_party" ],
+      "target": {
+         "url": "https://gaana.com/"
+      },
+      "version": "1.0.3"
+   }, {
+      "custom_actions": [ {
+         "action": {
+            "target": "new_tab",
+            "type": "url_action"
+         },
+         "icon": {
+            "builtin_icon": "OpenInNew"
+         },
+         "location": "header_button",
+         "name": "Open link in new tab"
+      } ],
+      "default_locale": "en",
       "description": " Listen to music on Tidal Music!",
       "disabled": true,
       "disabled|flight:msEdgeHubAppMusicTidalGlobal": false,
@@ -1477,6 +1613,105 @@
       "tags": [ "third_party" ],
       "target": {
          "url": "https://www.iheart.com/podcast/"
+      },
+      "version": "1.0.3"
+   }, {
+      "custom_actions": [ {
+         "action": {
+            "target": "new_tab",
+            "type": "url_action"
+         },
+         "icon": {
+            "builtin_icon": "OpenInNew"
+         },
+         "location": "header_button",
+         "name": "Open link in new tab"
+      } ],
+      "default_locale": "en",
+      "description": " Chat with people via VK!",
+      "disabled": true,
+      "disabled|flight:msEdgeHubAppVKGlobal": false,
+      "disabled|locale:en": false,
+      "icon": {
+         "raster_icon": {
+            "light_mode": "https://edgeassetservice.azureedge.net/assets/edge_hub_apps_vk.png/1.0.3/asset"
+         }
+      },
+      "id": "d2c61a42-950e-49da-800f-d1ba37e1cf2c",
+      "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAj2QrJa+3oJWwqnwuErm+7Aj5Hdjo82wuJSCZaSSVgBiPi6RpoPcynmBcHU5ZNFrejpetRulMAIUDAIamn/ccs1Hn4ghqtgOpR+hRG2WndA/xmQARCSj9H2rIAcnIXCx+jAwL7sygjGnVDAhNkAIU/Y2XYbfDfwZN2OXoM77li6qy75rqjg1YS1gXVyvXfnCcrudsbS15l5H3fxzfhQybzGNPugAs3sbgZv3EY89lO5nX2Pv3oUw0L3zbn78OTB0kXark+Qs3txWy6Hr5cXstHZBXZdH1HAZpGtlwcZne4b7VfQEKJ3Z441ZW04vSaa/mav5jXfev+QbVONJR9/D3FQIDAQAB",
+      "lifetime": "background",
+      "locales": [ "en" ],
+      "manifest_version": 3,
+      "name": "VK",
+      "tags": [ "third_party" ],
+      "target": {
+         "url": "https://m.vk.com/"
+      },
+      "version": "1.0.3"
+   }, {
+      "custom_actions": [ {
+         "action": {
+            "target": "new_tab",
+            "type": "url_action"
+         },
+         "icon": {
+            "builtin_icon": "OpenInNew"
+         },
+         "location": "header_button",
+         "name": "Open link in new tab"
+      } ],
+      "default_locale": "en",
+      "description": " Listen to music on Naver Vibe!",
+      "disabled": true,
+      "disabled|flight:msEdgeHubAppMusicNaverVibeGlobal": false,
+      "disabled|locale:en": false,
+      "icon": {
+         "raster_icon": {
+            "light_mode": "https://edgeassetservice.azureedge.net/assets/edge_hub_apps_naver_vibe.png/1.0.3/asset"
+         }
+      },
+      "id": "e7103ffc-db88-4747-bd00-c01a32de2621",
+      "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAxHKpt61q/n4vwwX2JuU0FcDpEQqh7l6Ij5y6QpTZK7ORhr3cHY0HzyIVQNnfY/IdaSTq1p2uJcvpzlsNuBJS6AHXTPlOJy4lfnl9VIZ1/Z2PJ7EP7YhAmQr1pYUN05x8Y4jRZ/KtVqOPlMtjRkOeuKz40DoebwUCDrFL9mkYSM08+IyIExThu0IS/EzIHyvt3bSZ5bid/K/kFiIbm5biofVt0jugxLQpXsNOwOvZaUfHsGjsxt+7l+fIhpHcHkyzDkQSBLIRr4GzvDsXRet/t3l78cNegTx/nFdtM578YrQs6/KycXaicT4XvfPhASDPCx0yzeUrNR2SrWYgbehcbQIDAQAB",
+      "lifetime": "background",
+      "locales": [ "en" ],
+      "manifest_version": 3,
+      "name": "Naver Vibe",
+      "tags": [ "third_party" ],
+      "target": {
+         "url": "https://vibe.naver.com/today"
+      },
+      "version": "1.0.3"
+   }, {
+      "custom_actions": [ {
+         "action": {
+            "target": "new_tab",
+            "type": "url_action"
+         },
+         "icon": {
+            "builtin_icon": "OpenInNew"
+         },
+         "location": "header_button",
+         "name": "Open link in new tab"
+      } ],
+      "default_locale": "en",
+      "description": " Listen to music on 163 Music!",
+      "disabled": true,
+      "disabled|flight:msEdgeHubAppMusic163Global": false,
+      "disabled|locale:en": false,
+      "icon": {
+         "raster_icon": {
+            "light_mode": "https://edgeassetservice.azureedge.net/assets/edge_hub_apps_163_music.png/1.0.3/asset"
+         }
+      },
+      "id": "f5acef52-81e2-484c-8010-c743f58039c7",
+      "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAoQ2b1xTVBDxch98rPIDdai0PH+mVPgee2qmm7dWqzMUUDwFj934vuy8fovqQM2IMLkPyVvLatS14vqABTY59jgdIUr9ic/trUqIQ7eKVrwKa/qhTf/codztfuYhyhS3/2jKg6suWAlH40CeXjsypOyqi216sxcSQbNoERwAfunn1Gn5nY/GWXA0JtRJSQV1FKRsoT/D5GRD83C83kl5iCBnj7POidOHWOYfFBqD1i8Lfab5LyrtC4n/7OE6n99Qk/cZswdZOWCZhEvbrDOk/Myut0T9TstifxjZ4pveBGAX6QxqCCFCdhWAb52gq5lAYAYNM7td5WQ0bc1BoRf+C2wIDAQAB",
+      "lifetime": "background",
+      "locales": [ "en" ],
+      "manifest_version": 3,
+      "name": "163 Music",
+      "tags": [ "third_party" ],
+      "target": {
+         "url": "https://y.music.163.com/m/"
       },
       "version": "1.0.3"
    }, {

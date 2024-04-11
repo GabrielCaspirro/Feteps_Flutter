@@ -17,9 +17,10 @@
             "time_to_live_sec": 86400
          },
          "settings_toggle": {
-            "description": "When a link is opened from Copilot on the web, the side pane will automatically open to continue the conversation",
-            "title": "Automatically open Copilot in the side pane to continue conversations"
+            "description": "Quando um link for aberto do Copilot na Web, o painel lateral será aberto automaticamente para continuar a conversa",
+            "title": "Abrir o Copilot automaticamente no painel lateral para continuar as conversas"
          },
+         "supported_platforms": [ "win", "mac", "linux" ],
          "triggering_config": {
             "signal_name": "IsUndersidePersistentChatLink",
             "signal_threshold": 0.5
@@ -28,6 +29,11 @@
          "approved_channels": [ "canary", "dev", "beta", "stable" ],
          "enabled": false,
          "enabled|flight:msEdgeChatPDFAutoShow|flight:msEdgeChatAutoOpenUseV2Framework": true,
+         "fallback_notification": {
+            "location": "omnibox",
+            "show_count": 3,
+            "text": "Get PDF insights"
+         },
          "footer": {
             "open_count": 3,
             "text": "We launched Copilot to assist you with your PDF"
@@ -36,13 +42,19 @@
          "id": "e06e75c1-a59a-4ab6-8361-e8b038e00a8c",
          "lifetime|flight:msHubAppsPDFAutoOpenPerTab": "tab",
          "non_visible_user_friendly_name": "Underside PDF Chat Link",
+         "red_dot_notification_data": {
+            "footer": {
+               "enabled": false
+            }
+         },
          "remember_context": {
             "time_to_live_sec": 86400
          },
          "settings_toggle": {
-            "description": "When a PDF is opened in Microsoft Edge, the side pane will automatically open to assist you with your PDF",
-            "title": "Automatically open Copilot in the side pane for PDFs"
-         }
+            "description": "Quando um PDF for aberto no Microsoft Edge, o painel lateral será aberto automaticamente para ajudá-lo com o PDF.",
+            "title": "Abrir o Copilot automaticamente no painel lateral para PDFs"
+         },
+         "supported_platforms": [ "win", "mac", "linux" ]
       }, {
          "approved_channels": [ "canary", "dev", "beta", "stable" ],
          "enabled": false,
@@ -58,9 +70,10 @@
             "time_to_live_sec": 86400
          },
          "settings_toggle": {
-            "description": "When you interact with Microsoft Bing's \"People also ask\" section, the side pane will automatically open to provide you with detailed information on common questions from other users.",
-            "title": "Automatically open Copilot in the side pane when you interact with Microsoft Bing's \"People also ask\"."
-         }
+            "description": "Quando você interage com a seção \"Pessoas também perguntar\" do Microsoft Bing, o painel lateral será aberto automaticamente para fornecer informações detalhadas sobre perguntas comuns de outros usuários.",
+            "title": "Abra automaticamente o Copilot no painel lateral quando você interagir com o \"Pessoas também perguntar\" do Microsoft Bing."
+         },
+         "supported_platforms": [ "win", "mac", "linux" ]
       } ],
       "auto_show": {
          "enabled": true,
@@ -101,9 +114,9 @@
       "description": "Informações contextualmente relevantes para qualquer página",
       "icon": {
          "raster_icon": {
-            "dark_mode": "https://edgeassetservice.azureedge.net/assets/edge_hub_apps_copilot_blue.png/1.3.5/asset",
-            "high_contrast": "https://edgeassetservice.azureedge.net/assets/edge_hub_apps_copilot_hc.png/1.3.5/asset",
-            "light_mode": "https://edgeassetservice.azureedge.net/assets/edge_hub_apps_copilot_blue.png/1.3.5/asset"
+            "dark_mode": "https://edgeassetservice.azureedge.net/assets/edge_hub_apps_copilot_blue.png/1.3.11/asset",
+            "high_contrast": "https://edgeassetservice.azureedge.net/assets/edge_hub_apps_copilot_hc.png/1.3.11/asset",
+            "light_mode": "https://edgeassetservice.azureedge.net/assets/edge_hub_apps_copilot_blue.png/1.3.11/asset"
          }
       },
       "id": "cd4688a9-e888-48ea-ad81-76193d56b1be",
@@ -116,8 +129,7 @@
          "enabled": true,
          "triggers|flight:msOmniboxSummarizeNotification": [ {
             "config": {
-               "max_show_count": 3,
-               "min_sec_between_auto_show": 86400,
+               "min_sec_between_auto_show": 7200,
                "show_count_basis": "signal",
                "signal_name": "IsTextPage",
                "signal_threshold": 0.5
@@ -127,25 +139,13 @@
             "type": "triggering_config"
          }, {
             "config": {
-               "max_show_count": 3,
-               "min_sec_between_auto_show": 86400,
+               "min_sec_between_auto_show": 7200,
                "show_count_basis": "signal",
                "signal_name": "IsVideoPage",
                "signal_threshold": 0.5
             },
             "location": "omnibox",
-            "text": "Summarize the video with Copilot",
-            "type": "triggering_config"
-         }, {
-            "config": {
-               "max_show_count": 3,
-               "min_sec_between_auto_show": 86400,
-               "show_count_basis": "signal",
-               "signal_name": "IsPdfPage",
-               "signal_threshold": 0.5
-            },
-            "location": "omnibox",
-            "text": "Summarize the PDF with Copilot",
+            "text": "General video highlights",
             "type": "triggering_config"
          } ],
          "triggers|flight:msUndersideGamingNotification": [ {
@@ -187,7 +187,7 @@
       "target": {
          "command": "discover_chat"
       },
-      "version": "1.3.5"
+      "version": "1.3.11"
    }, {
       "auto_show": {
          "enabled": true,
@@ -230,7 +230,7 @@
       "version": "1.2.3"
    }, {
       "auto_open_v2": [ {
-         "approved_channels": [ "canary", "dev" ],
+         "approved_channels": [ "canary", "dev", "beta", "stable" ],
          "enabled": false,
          "enabled|locale:zh_CN|flight:msUpsellBingAtSidebar": true,
          "footer": {
@@ -244,8 +244,8 @@
             "time_to_live_sec": 86400
          },
          "settings_toggle": {
-            "description": "We'll automatically open the Search pane to show you relevant content while you search",
-            "title": "Automatically open Search"
+            "description": "Abriremos automaticamente o painel Pesquisar para mostrar o conteúdo relevante enquanto você pesquisa",
+            "title": "Abrir Pesquisa automaticamente"
          },
          "triggering_config": {
             "min_sec_between_auto_open": 86400,
@@ -253,16 +253,34 @@
             "signal_name": "IsAutoOpenSidebarSearchQuery",
             "signal_threshold": 0.5
          }
+      }, {
+         "approved_channels": [ "canary", "dev" ],
+         "enabled": false,
+         "enabled|flight:msEnhancedWindowsSearch": true,
+         "footer": {
+            "open_count": 3,
+            "text": "Continue explorando resultados de pesquisa adicionais enquanto você navega."
+         },
+         "id": "3662f1e2-66ae-464f-b690-e7e3dc4fc662",
+         "lifetime": "tab",
+         "non_visible_user_friendly_name": "Enhanced Windows Search",
+         "remember_context": {
+            "time_to_live_sec": 86400
+         },
+         "settings_toggle": {
+            "description": "Abriremos automaticamente o painel Pesquisar para mostrar o conteúdo relevante enquanto você pesquisa",
+            "title": "Abrir automaticamente o Aplicativo de Pesquisa do Windows Search Box"
+         }
       } ],
       "auto_show": {
          "enabled": true,
          "enabled|locale:zh_CN|flight:msUpsellBingAtSidebar": false,
          "fre_notification": {
             "enabled": true,
-            "header": "Search auto-open to show you additional search results. Was this helpful?",
+            "header": "Pesquise a abertura automática para mostrar resultados de pesquisa adicionais. Isso foi útil?",
             "show_count": 1,
             "show_count|flight:msGoogleSBS": 5,
-            "text": "Search auto-open to show you additional search results. Was this helpful?"
+            "text": "Pesquise a abertura automática para mostrar resultados de pesquisa adicionais. Isso foi útil?"
          },
          "fre_notification|locale:zh_CN|flight:msUpsellBingAtSidebar": {
             "enabled": true,
@@ -270,8 +288,8 @@
             "show_count": 5,
             "text": "Open to show you additional search results, was this helpful?"
          },
-         "settings_description": "We'll automatically open the Search pane to show you relevant content while you search",
-         "settings_title": "Automatically open Search",
+         "settings_description": "Abriremos automaticamente o painel Pesquisar para mostrar o conteúdo relevante enquanto você pesquisa",
+         "settings_title": "Abrir Pesquisa automaticamente",
          "triggering_configs|flight:msShorelinePersistentSearch": [ {
             "signal_name": "IsBingPersistentSearchQuery",
             "signal_threshold": 0.5
@@ -288,9 +306,9 @@
       "description": "Pesquise sem perder seu lugar",
       "icon": {
          "raster_icon": {
-            "dark_mode": "https://edgeassetservice.azureedge.net/assets/edge_hub_apps_search_maximal_dark.png/1.3.11/asset",
-            "high_contrast": "https://edgeassetservice.azureedge.net/assets/edge_hub_apps_search_hc.png/1.3.11/asset",
-            "light_mode": "https://edgeassetservice.azureedge.net/assets/edge_hub_apps_search_maximal_light.png/1.3.11/asset"
+            "dark_mode": "https://edgeassetservice.azureedge.net/assets/edge_hub_apps_search_maximal_dark.png/1.3.14/asset",
+            "high_contrast": "https://edgeassetservice.azureedge.net/assets/edge_hub_apps_search_hc.png/1.3.14/asset",
+            "light_mode": "https://edgeassetservice.azureedge.net/assets/edge_hub_apps_search_maximal_light.png/1.3.14/asset"
          }
       },
       "id": "8ac719c5-140b-4bf2-a0b7-c71617f1f377",
@@ -305,7 +323,7 @@
       "target": {
          "command": "search"
       },
-      "version": "1.3.11"
+      "version": "1.3.14"
    }, {
       "capabilities": {
          "deprecated_hide_header": true
@@ -663,7 +681,7 @@
          },
          "icon": {
             "raster_icon": {
-               "light_mode": "https://edgeassetservice.azureedge.net/assets/edge_hub_apps_word.png/1.7.35/asset"
+               "light_mode": "https://edgeassetservice.azureedge.net/assets/edge_hub_apps_word.png/1.7.36/asset"
             }
          },
          "location": "hovercard",
@@ -676,7 +694,7 @@
          },
          "icon": {
             "raster_icon": {
-               "light_mode": "https://edgeassetservice.azureedge.net/assets/edge_hub_apps_excel.png/1.7.35/asset"
+               "light_mode": "https://edgeassetservice.azureedge.net/assets/edge_hub_apps_excel.png/1.7.36/asset"
             }
          },
          "location": "hovercard",
@@ -689,7 +707,7 @@
          },
          "icon": {
             "raster_icon": {
-               "light_mode": "https://edgeassetservice.azureedge.net/assets/edge_hub_apps_power_point.png/1.7.35/asset"
+               "light_mode": "https://edgeassetservice.azureedge.net/assets/edge_hub_apps_power_point.png/1.7.36/asset"
             }
          },
          "location": "hovercard",
@@ -711,9 +729,9 @@
       "description": "Acesse o Microsoft 365 Apps gratuitamente",
       "icon": {
          "raster_icon": {
-            "dark_mode": "https://edgeassetservice.azureedge.net/assets/edge_hub_apps_M365_dark.png/1.7.35/asset",
-            "high_contrast": "https://edgeassetservice.azureedge.net/assets/edge_hub_apps_M365_hc.png/1.7.35/asset",
-            "light_mode": "https://edgeassetservice.azureedge.net/assets/edge_hub_apps_M365_light.png/1.7.35/asset"
+            "dark_mode": "https://edgeassetservice.azureedge.net/assets/edge_hub_apps_M365_dark.png/1.7.36/asset",
+            "high_contrast": "https://edgeassetservice.azureedge.net/assets/edge_hub_apps_M365_hc.png/1.7.36/asset",
+            "light_mode": "https://edgeassetservice.azureedge.net/assets/edge_hub_apps_M365_light.png/1.7.36/asset"
          }
       },
       "id": "64be4f9b-3b81-4b6e-b354-0ba00d6ba485",
@@ -727,16 +745,39 @@
       "target": {
          "url": "edge://free-office/?sharedHeader=1",
          "url|flight:msEdgeHubAppOfficeCom": "https://www.office.com",
-         "url|flight:msEdgeHubAppOfficePlusChina": "https://www.officeplus.cn/?sid=shoreline&endpoint=OPPC&source=OPCNshoreline"
+         "url|flight:msEdgeHubAppOfficePlusChina|market:CN": "https://www.officeplus.cn/?sid=shoreline&endpoint=OPPC&source=OPCNshoreline"
       },
-      "version": "1.7.35"
+      "version": "1.7.36"
    }, {
-      "auto_show": {
-         "dsat_flyout": {
-            "trigger_count": 3,
-            "trigger_seconds": 5
+      "auto_open_v2": [ {
+         "approved_channels": [ "canary", "dev", "beta", "stable" ],
+         "enabled": false,
+         "enabled|flight:msEdgeHubAppsAutoOpenOutlookV2": true,
+         "fallback_notification": {
+            "show_count": 5,
+            "text": "Exibir email de origem"
          },
+         "footer": {
+            "enabled": true,
+            "open_count": 3,
+            "text": "Abrimos o Outlook para mostrar seu email lado a lado com o link que você abriu"
+         },
+         "force_auto_open": true,
+         "id": "f5b8c725-cb2e-4c12-accd-73e500d88d47",
+         "lifetime": "tab",
+         "non_visible_user_friendly_name": "Win32 Outlook Protocol launch",
+         "remember_context": {
+            "time_to_live_sec": 86400
+         },
+         "settings_toggle": {
+            "description": "Quando um link da Web for aberto de um email do Outlook, o painel lateral será aberto automaticamente para mostrar esse email para contexto.",
+            "learn_more_link": "https://go.microsoft.com/fwlink/?linkid=2213996",
+            "title": "Abrir automaticamente o contexto de email do Outlook no painel lateral"
+         }
+      } ],
+      "auto_show": {
          "enabled": true,
+         "enabled|flight:msEdgeHubAppsAutoOpenOutlookV2": false,
          "fallback_notification": {
             "show_count": 5,
             "text": "Exibir email de origem"
@@ -800,9 +841,9 @@
       "description": "Verifique o email enquanto permanece no seu fluxo",
       "icon": {
          "raster_icon": {
-            "dark_mode": "https://edgeassetservice.azureedge.net/assets/edge_hub_apps_outlook_dark.png/1.11.4/asset",
-            "high_contrast": "https://edgeassetservice.azureedge.net/assets/edge_hub_apps_outlook_hc.png/1.11.4/asset",
-            "light_mode": "https://edgeassetservice.azureedge.net/assets/edge_hub_apps_outlook_light.png/1.11.4/asset"
+            "dark_mode": "https://edgeassetservice.azureedge.net/assets/edge_hub_apps_outlook_dark.png/1.11.6/asset",
+            "high_contrast": "https://edgeassetservice.azureedge.net/assets/edge_hub_apps_outlook_hc.png/1.11.6/asset",
+            "light_mode": "https://edgeassetservice.azureedge.net/assets/edge_hub_apps_outlook_light.png/1.11.6/asset"
          }
       },
       "id": "8682d0fa-50b3-4ece-aa5b-e0b33f9919e2",
@@ -847,7 +888,7 @@
       },
       "trusted_domains": [ "live.com", "office.com", "microsoftonline.com", "microsoft.com", "office365.com" ],
       "trusted_types": [ "default", "dompurify" ],
-      "version": "1.11.4"
+      "version": "1.11.6"
    }, {
       "capabilities|flight:msDesignerSinglePrompt": {
          "enable_force_dark_mode": true
@@ -1054,43 +1095,6 @@
          "url": "edge://designer/"
       },
       "version": "1.0.21"
-   }, {
-      "capabilities": {
-         "show_domain_in_header": true
-      },
-      "custom_actions": [ {
-         "action": {
-            "target": "new_tab",
-            "type": "url_action"
-         },
-         "icon": {
-            "builtin_icon": "OpenInNew"
-         },
-         "location": "header_button",
-         "name": "Abrir em uma nova guia"
-      } ],
-      "default_locale": "en",
-      "description": "Ouça música no Deezer!",
-      "icon": {
-         "raster_icon": {
-            "light_mode": "https://edgeassetservice.azureedge.net/assets/edge_hub_apps_deezer.png/1.4.12/asset"
-         }
-      },
-      "id": "ec843dfc-b28b-4030-9fb9-edcf38942a5e",
-      "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAtLkHqnpIMr+F/sufczHYWH15BMPhTITGkOTVhzNKkJI2NL9mPVYMr7Hyqk3PjOdUqUsuyrNxWbuco1nFeXdi6gWAT6kAlEw23r8gwvVGoakllgU0fiSskNwLzakiBxhnh28JK8i0LbJsNUJaPJFbsOW/hdtEL+bIV0xk0UBtszphFBe0unFVVhKaowYXbAKE6lKRWUkeXd6VKYrxtZDaphug/JjCA7tJPxlO8jKzio3l0UFGbS8r7+z3+5sIjjPyfPshudsa8J8wxuYenTRIXMYKW513n6g0LpHBF1bJ5C3f2TT4OsuB00XDLkfpGBv6Wiy232K1WwDBdzStgG0Q2QIDAQAB",
-      "lifetime": "background",
-      "locales": [ "af", "am", "ar", "as", "az", "bg", "bn_IN", "bs", "ca", "ca_Es_VALENCIA", "cs", "cy", "da", "de", "el", "en", "en_GB", "es", "es_MX", "et", "eu", "fa", "fi", "fil", "fil", "fr", "fr_CA", "ga", "gd", "gl", "gu", "he", "hi", "hr", "hu", "hy", "id", "is", "it", "ja", "ka", "kk", "km", "kn", "ko", "kok", "kok", "lb", "lo", "lt", "lv", "mi", "mk", "ml", "mr", "ms", "mt", "nb", "ne", "nl", "nn", "or", "pa", "pl", "pt_BR", "pt_PT", "quz", "ro", "ru", "sk", "sl", "sq", "sr_Cyrl_BA", "sr_Cyrl_RS", "sr_Latn_RS", "sv", "ta", "te", "th", "tr", "tt", "ug", "uk", "ur", "uz", "vi", "zh_CN", "zh_TW" ],
-      "manifest_version": 3,
-      "name": "Deezer",
-      "notifications": {
-         "enabled": true
-      },
-      "preferred_side_pane_width": 1000,
-      "tags": [ "third_party" ],
-      "target": {
-         "url": "https://www.deezer.com/"
-      },
-      "version": "1.4.12"
    }, {
       "capabilities": {
          "show_domain_in_header": true
@@ -1430,138 +1434,6 @@
          "name": "Open link in new tab"
       } ],
       "default_locale": "en",
-      "description": " Listen to music on Last Music!",
-      "disabled": true,
-      "disabled|flight:msEdgeHubAppMusicLastGlobal": false,
-      "disabled|locale:en": false,
-      "icon": {
-         "raster_icon": {
-            "light_mode": "https://edgeassetservice.azureedge.net/assets/edge_hub_apps_last.png/1.0.3/asset"
-         }
-      },
-      "id": "3a2f4dee-d482-4ef8-baef-cb22b649608c",
-      "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAmE6jldMEkGVUM1QJA4AFhjTkspK5vXgShQew/SsBZi1lk3LdAJQNMxdTt7WKkAGMA0kfBDNOCMmhKBcZobJok36ukKBrSFHub7Z6+SpI+0O3gOuWbFBSWRUdEMlIADHT2ViH0vwRYm5Lq2cyItUl85VRbE4f6/TQoOF52Qqw6qFPcEbueSRLJfaspIuC1bSXydOUOQ/oMnNTtvaSnLchD2t1x99SotRCF4M+S64pPhTxgqLGHuRjBjTFPYckexucYX0nWy5D+gTsrB+iB93Pn7PslqFNmmtNkvE7Mac2T7T6KQkfMG1OvdvlOAxIGHvecGK4v5RgYQSCqP+9xmmodwIDAQAB",
-      "lifetime": "background",
-      "locales": [ "en" ],
-      "manifest_version": 3,
-      "name": "Last Music",
-      "tags": [ "third_party" ],
-      "target": {
-         "url": "https://www.last.fm/"
-      },
-      "version": "1.0.3"
-   }, {
-      "custom_actions": [ {
-         "action": {
-            "target": "new_tab",
-            "type": "url_action"
-         },
-         "icon": {
-            "builtin_icon": "OpenInNew"
-         },
-         "location": "header_button",
-         "name": "Open link in new tab"
-      } ],
-      "default_locale": "en",
-      "description": " Listen to music on Ku Gou!",
-      "disabled": true,
-      "disabled|flight:msEdgeHubAppMusicKuGouGlobal": false,
-      "disabled|locale:en": false,
-      "icon": {
-         "raster_icon": {
-            "light_mode": "https://edgeassetservice.azureedge.net/assets/edge_hub_apps_ku_gou.png/1.0.3/asset"
-         }
-      },
-      "id": "3b5ee6f6-5322-4061-81e4-d97681852d66",
-      "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAmHsb5wJfFzBA2rthZIZPHPqdU0OM5tVP8PZYE7+9/k2AYj8W/wUOr9fo5/eYdcCyeo4OGCApf6pPTgGyS9S0TEb1K+LncaBT8YdwNSnWIBAsDvP5SzjSt/7XCuKx6CNBIXUi/bML+0MI7uwC8xo/IrgNWWaWBqm3oJ3NCtrx/focCP2iMznQuiPKS96Xw25Knl4YHfxFxxwQfqC9y61U6v4F20cNIVSyQF0MaWxLNAcSLVGuOOOBLr/oL0iS2AbNb4qkXI4NxyM/+tlj+up6ZARoYHI1M+ntOADQXRUINSPVx3hO2iJy+SKtf3Xx7h41QLUdZ+KOWD64eqTadImrrQIDAQAB",
-      "lifetime": "background",
-      "locales": [ "en" ],
-      "manifest_version": 3,
-      "name": "Ku Gou",
-      "tags": [ "third_party" ],
-      "target": {
-         "url": "https://m.kugou.com/"
-      },
-      "version": "1.0.3"
-   }, {
-      "custom_actions": [ {
-         "action": {
-            "target": "new_tab",
-            "type": "url_action"
-         },
-         "icon": {
-            "builtin_icon": "OpenInNew"
-         },
-         "location": "header_button",
-         "name": "Open link in new tab"
-      } ],
-      "default_locale": "en",
-      "description": " Listen to music on QQ Music!",
-      "disabled": true,
-      "disabled|flight:msEdgeHubAppMusicQQGlobal": false,
-      "disabled|locale:en": false,
-      "icon": {
-         "raster_icon": {
-            "light_mode": "https://edgeassetservice.azureedge.net/assets/edge_hub_apps_qq.png/1.0.3/asset"
-         }
-      },
-      "id": "42985e4c-2a12-401d-90f2-afaff9cd7c92",
-      "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAzmfgOpfXJwtGfxGRnHplGxYc1nLfyKWffGD4nDIY+S4uMKCYJEh0a+gR75AQsDGdyrfxJ6hHXOH5wEW2y3wPUVyl4YkM2PRrfXdyG61RXODdm7Rz9MM+c9AqIWiZkJ/7QnZX+d8iIX45TmHzNAqPhc0usYfCXaFeHAQ2GnpEiuBvzLry3b0oYKb4Lo8GBrdsyVt1TuA7b86bRimpb3j1WH206Ua9rKASDcAbXrGc8CnC6fs/azZ2BHfkW6WYSNjv/f2lYd5g44xrOQ8Q+bnIoNPhd/sPiEE1J9Ekf8pSxe9pBQQ5rkc4N+B6nV6yMU7Hs+s24kwj444WMMWjapkrgwIDAQAB",
-      "lifetime": "background",
-      "locales": [ "en" ],
-      "manifest_version": 3,
-      "name": "QQ Music",
-      "tags": [ "third_party" ],
-      "target": {
-         "url": "https://i.y.qq.com/n2/m/index.html"
-      },
-      "version": "1.0.3"
-   }, {
-      "custom_actions": [ {
-         "action": {
-            "target": "new_tab",
-            "type": "url_action"
-         },
-         "icon": {
-            "builtin_icon": "OpenInNew"
-         },
-         "location": "header_button",
-         "name": "Open link in new tab"
-      } ],
-      "default_locale": "en",
-      "description": " Listen to music on Gaana Music!",
-      "disabled": true,
-      "disabled|flight:msEdgeHubAppMusicGaanaGlobal": false,
-      "disabled|locale:en": false,
-      "icon": {
-         "raster_icon": {
-            "light_mode": "https://edgeassetservice.azureedge.net/assets/edge_hub_apps_gaana.png/1.0.3/asset"
-         }
-      },
-      "id": "844aac69-589e-4f86-9e37-cc51a1f8ed96",
-      "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA2MZGDJZ41ITS6Ac+ed5gVqrXZE7jL6Ke0Ba80fAhgwQAA2909orv2Kr7saBl9RA5oDWkHHv96cpNuinkqXYoNJitka9La+fw7TOYakNPV7NWAAQhsjaZtlYoQuK4u3tfst5KcINdMjDDCmr0FwPG7ctK2IYVBcNOZpu1cIivi/sJyn9AaNHF00y/Qh/rrMMo++JKTIxQNXDq1sTFf0YUoN6/MMIteWgGhPMWkYmg0KYNM0I4Azbz6S/TIMxXLd/klgJDsGA+Y9FGwBqkjJhXOC5v5bxLlonUM+v2g5OpnqVx/HEF4/670Q4hxkkCEnfrq7sl+jJLclT5c63ZlZXkpQIDAQAB",
-      "lifetime": "background",
-      "locales": [ "en" ],
-      "manifest_version": 3,
-      "name": "Gaana Music",
-      "tags": [ "third_party" ],
-      "target": {
-         "url": "https://gaana.com/"
-      },
-      "version": "1.0.3"
-   }, {
-      "custom_actions": [ {
-         "action": {
-            "target": "new_tab",
-            "type": "url_action"
-         },
-         "icon": {
-            "builtin_icon": "OpenInNew"
-         },
-         "location": "header_button",
-         "name": "Open link in new tab"
-      } ],
-      "default_locale": "en",
       "description": " Listen to music on Tidal Music!",
       "disabled": true,
       "disabled|flight:msEdgeHubAppMusicTidalGlobal": false,
@@ -1613,105 +1485,6 @@
       "tags": [ "third_party" ],
       "target": {
          "url": "https://www.iheart.com/podcast/"
-      },
-      "version": "1.0.3"
-   }, {
-      "custom_actions": [ {
-         "action": {
-            "target": "new_tab",
-            "type": "url_action"
-         },
-         "icon": {
-            "builtin_icon": "OpenInNew"
-         },
-         "location": "header_button",
-         "name": "Open link in new tab"
-      } ],
-      "default_locale": "en",
-      "description": " Chat with people via VK!",
-      "disabled": true,
-      "disabled|flight:msEdgeHubAppVKGlobal": false,
-      "disabled|locale:en": false,
-      "icon": {
-         "raster_icon": {
-            "light_mode": "https://edgeassetservice.azureedge.net/assets/edge_hub_apps_vk.png/1.0.3/asset"
-         }
-      },
-      "id": "d2c61a42-950e-49da-800f-d1ba37e1cf2c",
-      "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAj2QrJa+3oJWwqnwuErm+7Aj5Hdjo82wuJSCZaSSVgBiPi6RpoPcynmBcHU5ZNFrejpetRulMAIUDAIamn/ccs1Hn4ghqtgOpR+hRG2WndA/xmQARCSj9H2rIAcnIXCx+jAwL7sygjGnVDAhNkAIU/Y2XYbfDfwZN2OXoM77li6qy75rqjg1YS1gXVyvXfnCcrudsbS15l5H3fxzfhQybzGNPugAs3sbgZv3EY89lO5nX2Pv3oUw0L3zbn78OTB0kXark+Qs3txWy6Hr5cXstHZBXZdH1HAZpGtlwcZne4b7VfQEKJ3Z441ZW04vSaa/mav5jXfev+QbVONJR9/D3FQIDAQAB",
-      "lifetime": "background",
-      "locales": [ "en" ],
-      "manifest_version": 3,
-      "name": "VK",
-      "tags": [ "third_party" ],
-      "target": {
-         "url": "https://m.vk.com/"
-      },
-      "version": "1.0.3"
-   }, {
-      "custom_actions": [ {
-         "action": {
-            "target": "new_tab",
-            "type": "url_action"
-         },
-         "icon": {
-            "builtin_icon": "OpenInNew"
-         },
-         "location": "header_button",
-         "name": "Open link in new tab"
-      } ],
-      "default_locale": "en",
-      "description": " Listen to music on Naver Vibe!",
-      "disabled": true,
-      "disabled|flight:msEdgeHubAppMusicNaverVibeGlobal": false,
-      "disabled|locale:en": false,
-      "icon": {
-         "raster_icon": {
-            "light_mode": "https://edgeassetservice.azureedge.net/assets/edge_hub_apps_naver_vibe.png/1.0.3/asset"
-         }
-      },
-      "id": "e7103ffc-db88-4747-bd00-c01a32de2621",
-      "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAxHKpt61q/n4vwwX2JuU0FcDpEQqh7l6Ij5y6QpTZK7ORhr3cHY0HzyIVQNnfY/IdaSTq1p2uJcvpzlsNuBJS6AHXTPlOJy4lfnl9VIZ1/Z2PJ7EP7YhAmQr1pYUN05x8Y4jRZ/KtVqOPlMtjRkOeuKz40DoebwUCDrFL9mkYSM08+IyIExThu0IS/EzIHyvt3bSZ5bid/K/kFiIbm5biofVt0jugxLQpXsNOwOvZaUfHsGjsxt+7l+fIhpHcHkyzDkQSBLIRr4GzvDsXRet/t3l78cNegTx/nFdtM578YrQs6/KycXaicT4XvfPhASDPCx0yzeUrNR2SrWYgbehcbQIDAQAB",
-      "lifetime": "background",
-      "locales": [ "en" ],
-      "manifest_version": 3,
-      "name": "Naver Vibe",
-      "tags": [ "third_party" ],
-      "target": {
-         "url": "https://vibe.naver.com/today"
-      },
-      "version": "1.0.3"
-   }, {
-      "custom_actions": [ {
-         "action": {
-            "target": "new_tab",
-            "type": "url_action"
-         },
-         "icon": {
-            "builtin_icon": "OpenInNew"
-         },
-         "location": "header_button",
-         "name": "Open link in new tab"
-      } ],
-      "default_locale": "en",
-      "description": " Listen to music on 163 Music!",
-      "disabled": true,
-      "disabled|flight:msEdgeHubAppMusic163Global": false,
-      "disabled|locale:en": false,
-      "icon": {
-         "raster_icon": {
-            "light_mode": "https://edgeassetservice.azureedge.net/assets/edge_hub_apps_163_music.png/1.0.3/asset"
-         }
-      },
-      "id": "f5acef52-81e2-484c-8010-c743f58039c7",
-      "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAoQ2b1xTVBDxch98rPIDdai0PH+mVPgee2qmm7dWqzMUUDwFj934vuy8fovqQM2IMLkPyVvLatS14vqABTY59jgdIUr9ic/trUqIQ7eKVrwKa/qhTf/codztfuYhyhS3/2jKg6suWAlH40CeXjsypOyqi216sxcSQbNoERwAfunn1Gn5nY/GWXA0JtRJSQV1FKRsoT/D5GRD83C83kl5iCBnj7POidOHWOYfFBqD1i8Lfab5LyrtC4n/7OE6n99Qk/cZswdZOWCZhEvbrDOk/Myut0T9TstifxjZ4pveBGAX6QxqCCFCdhWAb52gq5lAYAYNM7td5WQ0bc1BoRf+C2wIDAQAB",
-      "lifetime": "background",
-      "locales": [ "en" ],
-      "manifest_version": 3,
-      "name": "163 Music",
-      "tags": [ "third_party" ],
-      "target": {
-         "url": "https://y.music.163.com/m/"
       },
       "version": "1.0.3"
    }, {
@@ -2088,12 +1861,11 @@
    }, {
       "default_locale": "en",
       "description": "Ganhe recompensas do Microsoft Rewards apenas pesquisando, comprando e jogando com a Microsoft",
-      "flights": [ "msEdgeRewardsInSidebar" ],
       "icon": {
          "raster_icon": {
-            "dark_mode": "https://edgeassetservice.azureedge.net/assets/edge_hub_apps_rewards_maximal_dark.png/1.1.7/asset",
-            "high_contrast": "https://edgeassetservice.azureedge.net/assets/edge_hub_apps_rewards_hc.png/1.1.7/asset",
-            "light_mode": "https://edgeassetservice.azureedge.net/assets/edge_hub_apps_rewards_maximal_light.png/1.1.7/asset"
+            "dark_mode": "https://edgeassetservice.azureedge.net/assets/edge_hub_apps_rewards_maximal_dark.png/1.2.0/asset",
+            "high_contrast": "https://edgeassetservice.azureedge.net/assets/edge_hub_apps_rewards_hc.png/1.2.0/asset",
+            "light_mode": "https://edgeassetservice.azureedge.net/assets/edge_hub_apps_rewards_maximal_light.png/1.2.0/asset"
          }
       },
       "id": "698b01b4-557a-4a3b-9af7-a7e8138e8372",
@@ -2105,7 +1877,7 @@
          "url": "https://edgeservices.bing.com/rewards/panelflyout/engagement?channel=bingflyout&partnerId=RewardsHub&isDarkMode=0",
          "url|theme:dark": "https://edgeservices.bing.com/rewards/panelflyout/engagement?channel=bingflyout&partnerId=RewardsHub&isDarkMode=1"
       },
-      "version": "1.1.7",
+      "version": "1.2.0",
       "wipe_rules": [ {
          "enable|flight:msEdgeWipeRewardsApp": true,
          "ignore_user_add": true,
@@ -2202,6 +1974,12 @@
          "red_dot_notification_data": {
             "lifetime": "window"
          },
+         "red_dot_notification_data|flight:msHubAppGameViewEnableCustomRedDotFooter": {
+            "footer": {
+               "description": "__MSG_auto_show_footer_prompt__"
+            },
+            "lifetime": "window"
+         },
          "settings_toggle": {
             "description": "When you switch to Microsoft Edge while playing a supported PC game, Game view will automatically open to show tips, guides, and other helpful content.",
             "title": "Automatically open Game view when switching from a PC game to Microsoft Edge"
@@ -2228,9 +2006,9 @@
       "flights": [ "msEdgeHubAppGameView" ],
       "icon": {
          "raster_icon": {
-            "dark_mode": "https://edgeassetservice.azureedge.net/assets/edge_hub_apps_controller_maximal_dark.png/1.0.6/asset",
-            "high_contrast": "https://edgeassetservice.azureedge.net/assets/edge_hub_apps_controller-hc.png/1.0.6/asset",
-            "light_mode": "https://edgeassetservice.azureedge.net/assets/edge_hub_apps_controller_maximal_light.png/1.0.6/asset"
+            "dark_mode": "https://edgeassetservice.azureedge.net/assets/edge_hub_apps_controller_maximal_dark.png/1.0.8/asset",
+            "high_contrast": "https://edgeassetservice.azureedge.net/assets/edge_hub_apps_controller-hc.png/1.0.8/asset",
+            "light_mode": "https://edgeassetservice.azureedge.net/assets/edge_hub_apps_controller_maximal_light.png/1.0.8/asset"
          }
       },
       "id": "c8ebd871-9f47-4a0d-abd3-c1c02b4f8f53",
@@ -2252,7 +2030,7 @@
       "target": {
          "url": "https://www.msn.com/widgets/fullpage/gaming/widget?experiences=GamingChannel"
       },
-      "version": "1.0.6"
+      "version": "1.0.8"
    }, {
       "auto_open_v2": [ {
          "approved_channels": [ "canary", "dev", "beta", "stable" ],
@@ -2265,6 +2043,7 @@
          "force_auto_open": false,
          "id": "c8ebbf64-e3b8-41d9-925f-4e3754151ff7",
          "lifetime": "tab",
+         "min_page_width_pixels": 1052,
          "non_visible_user_friendly_name": "MS Start Protocol Launch",
          "remember_context": {
             "time_to_live_sec": 86400
@@ -2272,6 +2051,56 @@
          "settings_toggle": {
             "description": "Permite que links de diferentes superfícies do Sistema Operacional Windows abram o Microsoft Start na barra lateral quando o Microsoft Edge é iniciado.",
             "title": "Abrir automaticamente o Microsoft Start na barra lateral"
+         }
+      }, {
+         "approved_channels": [ "canary", "dev", "beta", "stable" ],
+         "enabled": false,
+         "enabled|locale:ja|flight:msHubAppMsStartYJTop": true,
+         "footer": {
+            "open_count": 3,
+            "text": "Continue to explore your feed and related topics as you browse."
+         },
+         "force_auto_open": false,
+         "id": "75a774c2-6075-ae4f-09f9-e5f5d9bef6e1",
+         "lifetime": "tab",
+         "non_visible_user_friendly_name": "Yahoo Japan Top Site",
+         "remember_context": {
+            "time_to_live_sec": 86400
+         },
+         "settings_toggle": {
+            "description": "Allow visits to news websites to automatically open Microsoft Start in a sidebar.",
+            "title": "Automatically open Microsoft Start in the sidebar (news)"
+         },
+         "triggering_config": {
+            "hubappparams": "ocid=stpromoshoreline",
+            "hubappsubpath": "/ja-jp/feed",
+            "signal_name": "IsYahooJapanTopSites",
+            "signal_threshold": 0.5
+         }
+      }, {
+         "approved_channels": [ "canary", "dev", "beta", "stable" ],
+         "enabled": false,
+         "enabled|locale:ja|flight:msHubAppMsStartYJWeatherTop": true,
+         "footer": {
+            "open_count": 3,
+            "text": "Continue to explore your feed and related topics as you browse."
+         },
+         "force_auto_open": false,
+         "id": "a5e9f5e1-fcee-c07b-2c44-b707ded020a3",
+         "lifetime": "tab",
+         "non_visible_user_friendly_name": "Yahoo Japan Weather Top site",
+         "remember_context": {
+            "time_to_live_sec": 86400
+         },
+         "settings_toggle": {
+            "description": "Allow visits to weather websites to automatically open Microsoft Start in a sidebar.",
+            "title": "Automatically open Microsoft Start in the sidebar (weather)"
+         },
+         "triggering_config": {
+            "hubappparams": "ocid=stpromoshoreline",
+            "hubappsubpath": "/ja-jp/weather",
+            "signal_name": "IsYahooJapanWeatherTop",
+            "signal_threshold": 0.5
          }
       } ],
       "auto_show": {
@@ -2299,8 +2128,8 @@
       "flights": [ "msEdgeHubAppStart", "msEdgeTransientAppAutoOpen" ],
       "icon": {
          "raster_icon": {
-            "dark_mode": "https://edgeassetservice.azureedge.net/assets/edge_hub_apps_msstart_logo_dark.png/1.2.6/asset",
-            "light_mode": "https://edgeassetservice.azureedge.net/assets/edge_hub_apps_msstart_logo_light.png/1.2.6/asset"
+            "dark_mode": "https://edgeassetservice.azureedge.net/assets/edge_hub_apps_msstart_logo_dark.png/1.2.9/asset",
+            "light_mode": "https://edgeassetservice.azureedge.net/assets/edge_hub_apps_msstart_logo_light.png/1.2.9/asset"
          }
       },
       "id": "b7a8e9f2-6b0d-4c5b-ae7d-8a6e1f2c7a6f",
@@ -2316,7 +2145,7 @@
          "url": "https://www.msn.com/widgets/fullpage/winWidgets/sidebar?experiences=WindowsWidgetsHub",
          "url|locale:zh_CN": "https://www.msn.cn/widgets/fullpage/winWidgets/sidebar?experiences=WindowsWidgetsHub"
       },
-      "version": "1.2.6"
+      "version": "1.2.9"
    }, {
       "custom_actions": [ {
          "action": {

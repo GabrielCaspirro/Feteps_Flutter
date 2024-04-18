@@ -70,7 +70,7 @@
    }, {
       "appName": "reading_view",
       "data": {
-         "blockList": [ "gisdvl-jrvoice2.jreast.co.jp", "jrvoice2.jreast.co.jp" ],
+         "blockList": [ "gisdvl-jrvoice2.jreast.co.jp", "jrvoice2.jreast.co.jp", "www.marriott.com" ],
          "textLengthThreshold": 40,
          "whiteList": [ "mip.shengxuxu.com" ]
       },
@@ -206,14 +206,14 @@
       "appId": "a3f5b7c9d1e2f4a6b8c7d9e1f2a3b4d6",
       "appName": "topsites",
       "data": {
-         "latestOperationVersion": "",
+         "latestOperationVersion": "2.0",
          "latestOperationVersionForTesting": "2.0",
          "topSitesV2Enabled": false
       },
       "effectStrategy": "launch",
       "instanceId": "3e7a9c4b1f8d6e5c2a9b7e4d1c8f3e7b",
       "type": "normal",
-      "version": "1003"
+      "version": "1004"
    }, {
       "appId": "71146be72c1663fbeca572989b494b56",
       "appName": "shared_links",
@@ -233,21 +233,21 @@
       "appName": "darkmode",
       "data": {
          "androidBlocklist": [ "^(.*?\\:\\/{2,3})?([^/]*?\\.)?(www\\.msn\\.)(.*\\/news\\/other.*)$", "^https?:\\/\\/edge\\.microsoft\\.com\\/edgeedrop\\/continuity\\/index\\.html(?:\\?.*)?$" ],
-         "iOSBlocklist": [ "^(.*?\\:\\/{2,3})?([^/]*?\\.)?(www\\.msn\\.)(.*\\/news\\/other.*)$", "^https?:\\/\\/edge\\.microsoft\\.com\\/edgeedrop\\/continuity\\/index\\.html(?:\\?.*)?$", "^(.*?\\:\\/{2,3})?([^/]*?\\.)?(reddit\\.com)(\\/?.*?)$" ]
+         "iOSBlocklist": [ "^(.*?\\:\\/{2,3})?([^/]*?\\.)?(www\\.msn\\.)(.*\\/news\\/other.*)$", "^https?:\\/\\/edge\\.microsoft\\.com\\/edgeedrop\\/continuity\\/index\\.html(?:\\?.*)?$", "^(.*?\\:\\/{2,3})?([^/]*?\\.)?(reddit\\.com)(\\/?.*?)$", "^(.*?\\:\\/{2,3})?([^/]*?\\.)?(copilot\\.microsoft\\.com)(\\/?.*?)$", "msn.com", "reddit.com", "m.youtube.com", "copilot.microsoft.com" ]
       },
       "effectStrategy": "launch",
       "instanceId": "3e7a9c4b1f8d6e5c2a9b7e4d1c8f3e7a",
       "type": "builtin",
-      "version": "1002"
+      "version": "1003"
    }, {
       "appId": "8f6c546d0514482c9898cd8f963453cc",
       "appName": "operation_platform",
       "data": {
          "operation_notification_config": {
             "body": "Sample Body",
-            "max_datetime_str": "28 Feb 2024 13:00 GMT",
+            "max_datetime_str": "31 Mar 2024 13:00 GMT",
             "max_version": 125,
-            "min_datetime_str": "6 Feb 2024 13:00 GMT",
+            "min_datetime_str": "1 Mar 2024 13:00 GMT",
             "min_version": 122,
             "navigate_to": "microsoft-edge-x://action/copilot?query=weather+in+seattle&input=Keyboard&launchsource=DeeplinkAppStore&mode=Precise",
             "operation_id": 1,
@@ -261,9 +261,9 @@
          },
          "operation_upsell_config": {
             "is_full_screen": false,
-            "max_datetime_str": "28 Feb 2024 13:00 GMT",
+            "max_datetime_str": "31 Mar 2024 13:00 GMT",
             "max_version": 125,
-            "min_datetime_str": "6 Feb 2024 13:00 GMT",
+            "min_datetime_str": "1 Mar 2024 13:00 GMT",
             "min_version": 122,
             "operation_id": 1,
             "target_user_profile": {
@@ -277,7 +277,7 @@
       "effectStrategy": "launch",
       "instanceId": "35cafee49b9741a5ae5b2f7799ecc815",
       "type": "normal",
-      "version": "1010"
+      "version": "1011"
    } ],
-   "version": "202402220003"
+   "version": "202404150001"
 }

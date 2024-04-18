@@ -4,11 +4,11 @@ class Instituicoes extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false, // Removendo a faixa de debug
+      debugShowCheckedModeBanner: false, 
       home: Scaffold(
         body: SingleChildScrollView(
           child:
-              Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
+            Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
@@ -19,7 +19,7 @@ class Instituicoes extends StatelessWidget {
                 ),
                 IconButton(
                   iconSize: 42.0,
-                  icon: Icon(Icons.menu), // Ícone de três barrinhas
+                  icon: Icon(Icons.menu), 
                   onPressed: () {},
                 ),
               ],
@@ -66,8 +66,8 @@ class Instituicoes extends StatelessWidget {
             ),
             SizedBox(height: 2.0),
             Divider(
-              color: Colors.grey, // Cor da linha
-              thickness: 1.0, // Espessura da linha
+              color: Colors.grey, 
+              thickness: 1.0, 
             ),
             SizedBox(height: 10.0),
             SingleChildScrollView(
@@ -92,8 +92,8 @@ class Instituicoes extends StatelessWidget {
             ),
             SizedBox(height: 2.0),
             Divider(
-              color: Colors.grey, // Cor da linha
-              thickness: 1.0, // Espessura da linha
+              color: Colors.grey, 
+              thickness: 1.0, 
             ),
             SizedBox(height: 10.0),
             SingleChildScrollView(
@@ -130,12 +130,12 @@ class CardWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(8.0), // Adicionando espaço entre os cards
+      padding: const EdgeInsets.all(8.0), 
       child: Card(
-        color: Cor(inst), // Cor de fundo do card
+        color: Cor(inst), 
         shape: RoundedRectangleBorder(
           borderRadius:
-              BorderRadius.circular(10.0), // Arredondando as bordas do card
+              BorderRadius.circular(10.0), 
         ),
         child: SizedBox(
           width: 185.0,
@@ -144,7 +144,7 @@ class CardWidget extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               SizedBox(
-                  height: 10.0), // Adicionando espaço entre a borda e a imagem
+                  height: 10.0), 
               Image.asset('img/Rectangle.png'),
               SizedBox(height: 5.0),
               Text(
@@ -153,7 +153,7 @@ class CardWidget extends StatelessWidget {
                     fontWeight: FontWeight.bold,
                     fontSize: 18.0,
                     color: const Color.fromARGB(
-                        255, 255, 255, 255)), // Deixando as letras mais grossas
+                        255, 255, 255, 255)), 
               ),
               SizedBox(height: 3.0),
               Text(
@@ -161,7 +161,7 @@ class CardWidget extends StatelessWidget {
                 style: TextStyle(
                     fontFamily: "Poppins",
                     fontSize: 14.0,
-                    color: Color.fromARGB(255, 158, 156, 156)), // Definindo estilo para o texto menor
+                    color: Color.fromARGB(255, 158, 156, 156)), 
               ),
             ],
           ),

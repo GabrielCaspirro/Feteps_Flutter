@@ -5,32 +5,25 @@ class Projetos extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false, // Removendo a faixa de debug
+      debugShowCheckedModeBanner: false, 
       home: projetosHome()
     );
   }
 }
 
 class projetosHome extends StatefulWidget{
-  static int OdsValue = 0;
   @override 
   ProjetosHomeState createState() => ProjetosHomeState();
 }
 
 class ProjetosHomeState extends State<projetosHome>{
   int _selectedButtonIndex = -1;
-  static String text = CardWidget.value;
-
-  static void UpdateText(){
-    text = CardWidget.value;
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: SingleChildScrollView(
         child:
-            Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
+          Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
@@ -41,7 +34,7 @@ class ProjetosHomeState extends State<projetosHome>{
               ),
               IconButton(
                 iconSize: 42.0,
-                icon: Icon(Icons.menu), // Ícone de três barrinhas
+                icon: Icon(Icons.menu), 
                 onPressed: () {},
               ),
             ],
@@ -88,8 +81,8 @@ class ProjetosHomeState extends State<projetosHome>{
           ),
           SizedBox(height: 2.0),
           Divider(
-            color: Colors.grey, // Cor da linha
-            thickness: 1.0, // Espessura da linha
+            color: Colors.grey, 
+            thickness: 1.0,
           ),
           SizedBox(height: 10.0),
           SingleChildScrollView(
@@ -104,7 +97,7 @@ class ProjetosHomeState extends State<projetosHome>{
           Padding(
             padding: EdgeInsets.all(10.0),
             child: Text(
-              text,
+              "ODS 1: Erradicação da Pobreza",
               style: TextStyle(
                   fontFamily: "Inter",
                   fontSize: 32.0,
@@ -136,7 +129,7 @@ class ProjetosHomeState extends State<projetosHome>{
                       : null,
                 ),
               ),
-              SizedBox(width: 60), // Espaçamento entre os botões
+              SizedBox(width: 60),
               InkWell(
                 onTap: () {
                   _updateSelectedButton(1);
@@ -162,8 +155,8 @@ class ProjetosHomeState extends State<projetosHome>{
           ),
           SizedBox(height: 0),
           Divider(
-            color: Colors.grey, // Cor da linha
-            thickness: 1.0, // Espessura da linha
+            color: Colors.grey, 
+            thickness: 1.0, 
           ),
           SizedBox(height: 10.0),
           SingleChildScrollView(
@@ -286,16 +279,13 @@ class CardWidget extends StatelessWidget {
     ) as AlignmentGeometry;
     
     return Padding(
-      padding: const EdgeInsets.all(8.0), // Adicionando espaço entre os cards
+      padding: const EdgeInsets.all(8.0), 
       child: SizedBox(
         height: 180,
         width: 240,
         child: GestureDetector(
             onTap: () {
-              // Ação ao pressionar o card dentro do SizedBox
-              ChangeValue(projetosHome.OdsValue);
-              ProjetosHomeState.UpdateText();
-              print('O usuário pressionou o Card dentro do SizedBox!${(projetosHome.OdsValue)}');
+
             },
           child: Card(
             shape: RoundedRectangleBorder(
@@ -379,14 +369,6 @@ class CardWidget extends StatelessWidget {
       )
     );
   }
-
-  static String value = 'Error';
-
-  static void ChangeValue(ods) {
-    projetosHome.OdsValue = ods;
-    value = "${texto(projetosHome.OdsValue)[0]}: ${texto(projetosHome.OdsValue)[1]}";
-    print(value);
-  }
 }
 
 class CardWidget2 extends StatelessWidget {
@@ -397,12 +379,12 @@ class CardWidget2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(8.0), // Adicionando espaço entre os cards
+      padding: const EdgeInsets.all(8.0), 
       child: Card(
-        color: CardWidget.cor(ods), // Cor de fundo do card
+        color: CardWidget.cor(ods), 
         shape: RoundedRectangleBorder(
           borderRadius:
-              BorderRadius.circular(10.0), // Arredondando as bordas do card
+              BorderRadius.circular(10.0), 
         ),
         child: SizedBox(
           width: 185.0,
@@ -411,24 +393,24 @@ class CardWidget2 extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               SizedBox(
-                  height: 10.0), // Adicionando espaço entre a borda e a imagem
+                  height: 10.0), 
               Image.asset('img/Rectangle.png'),
               SizedBox(height: 5.0),
               Text(
-                'Nome do palestrante',
+                'Nome do projeto',
                 style: TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 14.0,
                     color: const Color.fromARGB(
-                        255, 0, 0, 0)), // Deixando as letras mais grossas
+                        255, 0, 0, 0)), 
               ),
               SizedBox(height: 3.0),
               Text(
-                'Descrição',
+                'Participantes',
                 style: TextStyle(
                     fontFamily: "Poppins",
                     fontSize: 10.0,
-                    color: Color.fromARGB(255, 0, 0, 0)), // Definindo estilo para o texto menor
+                    color: Color.fromARGB(255, 0, 0, 0)),
               ),
             ],
           ),

@@ -1,0 +1,50 @@
+{
+   "checksum": "b90195e41ff3751a3e025e5f242549aa",
+   "roots": {
+      "bookmark_bar": {
+         "children": [ {
+            "date_added": "13355013608157800",
+            "date_last_used": "0",
+            "guid": "98c5e8eb-f27b-4994-9988-79e6adf7cd5d",
+            "id": "7",
+            "name": "|\"",
+            "show_icon": false,
+            "source": "sync",
+            "type": "url",
+            "url": "https://docs.flutter.dev/get-started/install/windows/mobile?tab=download"
+         } ],
+         "date_added": "13357772542695388",
+         "date_last_used": "0",
+         "date_modified": "13355013608157800",
+         "guid": "0bc5d13f-2cba-5d74-951f-3f233fe6c908",
+         "id": "1",
+         "name": "Barra de favoritos",
+         "source": "unknown",
+         "type": "folder"
+      },
+      "other": {
+         "children": [  ],
+         "date_added": "13357772542695403",
+         "date_last_used": "0",
+         "date_modified": "0",
+         "guid": "82b081ec-3dd3-529c-8475-ab6c344590dd",
+         "id": "2",
+         "name": "Outros favoritos",
+         "source": "unknown",
+         "type": "folder"
+      },
+      "synced": {
+         "children": [  ],
+         "date_added": "13357772542695411",
+         "date_last_used": "0",
+         "date_modified": "0",
+         "guid": "4cf2e351-0e85-532b-bb37-df045d8f8d0f",
+         "id": "3",
+         "name": "Favoritos do celular",
+         "source": "unknown",
+         "type": "folder"
+      }
+   },
+   "sync_metadata": "CpsBCh4IiIECEggdw5TojgEAACoOEAAYASAAKAAwADgAQAASABpYSXBwbFIzZytCVWN0ZFYxSG1JM2g2eDFFUUZDZzNkNDhkQllsWnRueW1MUTlXcEEzK1pmWDJaWHdGVzdXVXZPUFpzM3U3NjNPczkzbHlUUGc0eXM4RHc9PSoYVWN1Myt6OG9hZHJRc1J1cm5ZRldXZz09SAOgBgwSpwEIBxKiAQocMWxUaFRlLzliaFdwZWdNUis4UHR6aW92dDg0PRIkOThjNWU4ZWItZjI3Yi00OTk0LTk5ODgtNzllNmFkZjdjZDVkGAAgAigCMJuG08TuMTiyxYGP6TFAkPbSxO4xShxuRWVtRkRnbzBWYlpJdTJmTnVLU0o0QXBmNFk9Wh4iHFV3YW05QXRGSzlzNDI2MmhGUzhxQzA4VkxtZz1lzPb9eRKJAQgBEoQBChx5eEovNmZ2a2VjcjdrcDVFUXpCNHRXTHBkYkU9EiQ2NjA4ZjczOS02NTkyLTU5NjAtYTJlMy0xMWZlNTBiNzllMjIYACAAKAAwueO3qeExOKntt6nhMUCp7bep4TFKHGFSQ1dMZ2hGOWI1SW5xS0lEdnVKL2p2UWtGYz1aAGUAAAAAEokBCAIShAEKHFljU1RvbnZFU1B3cUNzNEwyY3JWaHY2OEw5OD0SJDJmMTYwMmVmLWQzYWUtNWI1Mi05MjM3LTAyMWE3NjQxNTljZRgAIAAoADC647ep4TE42e23qeExQNntt6nhMUocb1BWa2h3QlJiVjY1S0NXUjIrSU9OSFdvT3U4PVoAZQAAAAASiQEIAxKEAQocbmpnRHU4OGVDcnZYcDg2cEQ3ZkhHY3FGcDg4PRIkNTYwYzEyZWQtM2I1YS01ZTA0LWE3NzctZDhlMzE1MGEzZjhjGAAgACgAML/jt6nhMTi97rep4TFAve63qeExShx5ek5CMDFjbjU0QTdjUlUwdVQrL1BnbVR0VW89WgBlAAAAADAAOAA=",
+   "version": 1
+}
